@@ -4,17 +4,31 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import About from "./pages/About";
 import Posts from "./pages/Posts";
 import Acount from "./pages/Acount";
+import Autor from "./pages/Autor";
+import Navbar from "./components/UI/navbar/Navbar";
 
 function App() {
 
+    const [posts, setPosts] = useState([
+        {id: 1, title: 'First', body:'Is a good post'},
+        {id: 2, title: 'Second', body:'Is a good post'},
+        {id: 3, title: 'Third', body:'Is a good post'}
+    ])
+    const [searchQuery, setSearchQuery] = useState('');
+    const searchResult = useMemo(() =>{
+        return posts.filter(post => post.title.toLowerCase().includes(searchQuery.toLowerCase()));
+    },[posts,searchQuery])
 
   return (
-    <div >
+    <div className="App">
+
         <BrowserRouter>
+            <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
             <Routes>
                 <Route path="/about" element={<About />} />
-                <Route path="/posts" element={<Posts/>}/>
+                <Route path="/" element={<Posts searchResult={searchResult} posts={posts}/>}/>
                 <Route path="/acount" element={<Acount/>}/>
+                <Route path="/autor" element={<Autor searchResult={searchResult} posts={posts}/>}/>
             </Routes>
         </BrowserRouter>
 
