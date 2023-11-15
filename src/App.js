@@ -4,17 +4,18 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import About from "./pages/About";
 import Posts from "./pages/Posts";
 import Acount from "./pages/Acount";
+import Settings from "./pages/Settings";
 
 function App() {
 
 
   return (
-    <div >
+    <div>
         <BrowserRouter>
             <Routes>
-                <Route path="/about" element={<About />} />
+                <Route path="/about" element={<About />}/>
                 <Route path="/posts" element={<Posts/>}/>
-                <Route path="/acount" element={<Acount/>}/>
+                <Route path="/" element={<Acount/>}/>
             </Routes>
         </BrowserRouter>
 
