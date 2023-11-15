@@ -24,3 +24,33 @@
 .list{
     text-align: center;
 }
+
+
+/*чат стилі*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.vertical-line{
+    border-left: 1px solid green;
+    height: 500px;
+}
+.left-element::after {
+
+    content: "🌟"; /* Додатковий символ перед лівим елементом */
+
+}
+.right-element::before {
+    content: "🌟";
+
+}
+.myChatInput{
+
+
+    padding: 10px 10px 10px 5px;
+    border-radius: 10px;
+    width: 500px;
+    height: 35px;
+    font-size: 30px;
+}

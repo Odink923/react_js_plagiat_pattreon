@@ -6,6 +6,7 @@ import Posts from "./pages/Posts";
 import Acount from "./pages/Acount";
 import Autor from "./pages/Autor";
 import Navbar from "./components/UI/navbar/Navbar";
+import Chat from "./pages/Chat";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/" element={<Posts searchResult={searchResult} posts={posts}/>}/>
                 <Route path="/acount" element={<Acount/>}/>
+                <Route path="/chat" element={<Chat/>}/>
                 <Route path="/autor" element={<Autor searchResult={searchResult} posts={posts}/>}/>
             </Routes>
         </BrowserRouter>

@@ -11,7 +11,7 @@ const Navbar = ({searchQuery, setSearchQuery}) => {
             <img width="200px" src="./logo.jpg"/>
             </Link>
             <PostFilter   searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
-            <Link to={"/about"}>
+            <Link to={"/chat"}>
             <MyButton style={{matginTop: 14}}>
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" className="bi bi-chat" viewBox="0 0 16 16">
