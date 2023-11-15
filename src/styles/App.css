@@ -38,11 +38,11 @@
 }
 .left-element::after {
 
-    content: "🌟"; /* Додатковий символ перед лівим елементом */
+
 
 }
 .right-element::before {
-    content: "🌟";
+
 
 }
 .myChatInput{

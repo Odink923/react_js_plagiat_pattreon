@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import MyInput from "../components/UI/input/MyInput";
 import MyButton from "../components/UI/button/MyButton";
 import ChatRightElement from "../components/ChatRightElement";
 import ChatLeftElement from "../components/ChatLeftElement";
 
 const Chat = () => {
+
     return (
         <div className="container">
         <div className="left-element">

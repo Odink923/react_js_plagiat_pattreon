@@ -27,7 +27,7 @@ const PostItem = ({setModal, ...props}) => {
 
                     <PostButton create={createComment} setModal={setModal}/>
                     <div>{props.post.body}</div>
-                    <CommentList comments={comments}/>
+                    <CommentList children={"Коментарі"} comments={comments}/>
 
                 </div>
             </div>
