@@ -24,7 +24,7 @@ function Posts() {
 
 
 
-            <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
+
             <PostList  posts={searchResult} setModal={setModal}  list={"User1"}/>
             <PostList  posts={searchResult} setModal={setModal}  list={"User2"}/>
             <ModalShare modal={modal} setModal={setModal}></ModalShare>

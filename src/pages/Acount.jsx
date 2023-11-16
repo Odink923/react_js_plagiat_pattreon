@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import PostList from "../components/PostList";
 import ModalShare from "../components/ModalShare";
-import MyModal from "../components/UI/modal/MyModal";
-import MyButton from "../components/UI/button/MyButton";
+
 import ModalCreate from "../components/UI/modal/ModalCreate";
+
 
 const Acount = () => {
 
@@ -46,10 +46,10 @@ const Acount = () => {
 
 
     return (
-        <div style={{width: `${window.innerWidth}px`}}>
+        <div >
 
-            <div>
-                <div style={{display: "flex", justifyContent: "center", minWidth: "500px", background:"linear-gradient(to top, white 35%, gray 90%)"}}>
+            <div style={{display:"flex", justifyContent: "center"}}>
+                <div  style={{display: "flex",  background:"linear-gradient(to top, white 35%, gray 90%)"}}>
                     <div>
                         <img width="300px" src={user.photo} style={{marginTop:"8%"}}/>
                     </div>
@@ -90,12 +90,12 @@ const Acount = () => {
                 <button style={{width:"50%"}} onClick={postsSelectedBtnClick}>Selected</button>
             </div>
 
-            <div style={{display: "flex", justifyContent:"center", marginTop:"1%", minWidth: "500px"}}>
+            <div style={{display: "flex", justifyContent:"center", marginTop:"1%", }}>
                 <button style={{height:"50px", width:"50px"}} onClick={()=>{setModalCreate(true);}}>+</button>
 
                 <ModalCreate modalCreate={modalCreate} user={user} setUser={setUser} setModalCreate={setModalCreate} createBtnClick={createBtnClick}/>
 
-                <div style={{width:"50%"}} id="postsList">
+                <div  id="postsList">
                     {showMyPosts && (
                         <PostList  posts={myPosts} setModal={setModalShare}  list={"my post"}/>
                     )}
