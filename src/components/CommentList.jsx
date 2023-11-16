@@ -2,10 +2,10 @@ import React from 'react';
 import PostItem from "./PostItem";
 import CommentItem from "./CommentItem";
 
-const CommentList = ({comments}) => {
+const CommentList = ({comments, children}) => {
     return (
         <div>
-            <h5 style={{marginTop: 20}} >Коментарі</h5>
+            <h5 style={{marginTop: 20}} >{children}</h5>
             {
                 comments.map((comment)=>
                 <CommentItem comment={comment} key={comment.id}
