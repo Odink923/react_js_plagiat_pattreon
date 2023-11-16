@@ -3,6 +3,7 @@ import PostList from "../components/PostList";
 import ModalShare from "../components/ModalShare";
 import MyModal from "../components/UI/modal/MyModal";
 import MyButton from "../components/UI/button/MyButton";
+import ModalCreate from "../components/UI/modal/ModalCreate";
 
 const Acount = () => {
 
@@ -41,18 +42,9 @@ const Acount = () => {
         setModalCreate(false);
     }
 
-    const [createPostTitle, setCreatePostTitle] = useState("");
-    const [createPostDescription, setCreatePostDescription] = useState("");
-    const [createPostTags, setCreatePostTags] = useState("");
-    const [createPostUrlPhoto, setCreatePostUrlPhoto] = useState("");
-    const [selectedPhotoFile, setSelectedPhotoFile] = useState(null);
 
-    const photoFileChange = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            setSelectedPhotoFile(file);
-        }
-    };
+
+
     return (
         <div style={{width: `${window.innerWidth}px`}}>
 
@@ -101,23 +93,7 @@ const Acount = () => {
             <div style={{display: "flex", justifyContent:"center", marginTop:"1%", minWidth: "500px"}}>
                 <button style={{height:"50px", width:"50px"}} onClick={()=>{setModalCreate(true);}}>+</button>
 
-                <MyModal visible={modalCreate} setVisible={setModalCreate}>
-                    <div style={{display: "flex"}}>
-                        <div style={{display: "inlineBlock", verticalAlign: "top"}}>
-                            <img style={{display: "inlineBlock", verticalAlign: "top"}} width="300px" src={user.photo} style={{marginTop:"8%"}}/>
-                            <input style={{display: "inlineBlock", verticalAlign: "top"}} name="photo" type="file" onChange={photoFileChange}/>
-                            <input style={{display: "inlineBlock", verticalAlign: "top"}} onChange={(e)=>{setCreatePostUrlPhoto(e.target.value)}} name="urlPhoto" placeholder="URL-photo"/>
-                        </div>
-                        <div style={{display:"inlineBlock", verticalAlign: "top"}}>
-                            <input style={{display: "inlineBlock", verticalAlign: "top"}} onChange={(e)=>{setCreatePostTitle(e.target.value)}} name="title" placeholder="Title"/>
-                            <input style={{display: "inlineBlock", verticalAlign: "top"}} onChange={(e)=>{setCreatePostDescription(e.target.value)}} name="description" placeholder="description"/>
-                            <input style={{display: "inlineBlock", verticalAlign: "top"}} onChange={(e)=>{setCreatePostTags(e.target.value)}} name="tags" placeholder="tags"/>
-                        </div>
-                        <div>
-                            <button onClick={createBtnClick}>Create</button>
-                        </div>
-                    </div>
-                </MyModal>
+                <ModalCreate modalCreate={modalCreate} user={user} setUser={setUser} setModalCreate={setModalCreate} createBtnClick={createBtnClick}/>
 
                 <div style={{width:"50%"}} id="postsList">
                     {showMyPosts && (
