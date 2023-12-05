@@ -10,7 +10,11 @@ const ChatRightElement = () => {
     const messages= useSelector((state)=>state.message.message);
     const [inputValue, setInputValue] = useState('');
     const handleAddMessage=() =>{
-        dispatch(addMessage(inputValue))
+        const message ={
+            body:inputValue,
+            id:Date.now()
+        }
+        dispatch(addMessage(message))
         setInputValue('')
     }
     const handleInputChange = (event)=>{
@@ -27,7 +31,7 @@ const ChatRightElement = () => {
         <div>
             <div ref={containerRef} style={{height: 400, overflow:"auto"}}>
                 {messages.map((message)=>
-                    (<div style={{margin:20}}>{message}
+                    (<div style={{margin:20}}>{message.body}
                     <div>{`${new Date().getHours()}:${new Date().getMinutes()}`}</div>
                     </div>
 

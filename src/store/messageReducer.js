@@ -1,5 +1,5 @@
 const defaultState ={
-    message: ["Hi", "How are u?"]
+    message: []
 }
 const ADD_MESSAGE = "ADD_MESSAGE"
 const REMOVE_MESSAGE = "REMOVE_MESSAGE"
