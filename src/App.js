@@ -22,7 +22,6 @@ function App() {
 
   return (
       <div className="App">
-
           <BrowserRouter>
               <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
               <Routes>
@@ -33,8 +32,6 @@ function App() {
                   <Route path="/autor" element={<Autor searchResult={searchResult} posts={posts}/>}/>
               </Routes>
           </BrowserRouter>
-
-
       </div>
   );
 }

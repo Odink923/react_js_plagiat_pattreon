@@ -49,9 +49,9 @@ const Acount = () => {
         <div >
 
             <div style={{display:"flex", justifyContent: "center"}}>
-                <div  style={{display: "flex",  background:"linear-gradient(to top, white 35%, gray 90%)"}}>
+                <div  style={{display: "flex"}}>
                     <div>
-                        <img width="300px" src={user.photo} style={{marginTop:"8%"}}/>
+                        <img width="300px" src={user.photo} style={{marginTop:"8%", border: "3px solid #ccc" }}/>
                     </div>
                     <div style={{marginLeft:"400px"}}>
                         <div style={{float: "right",marginTop:"50%", marginBottom:"220%"}}>

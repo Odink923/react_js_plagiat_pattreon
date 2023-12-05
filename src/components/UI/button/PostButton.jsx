@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 import MyButton from "./MyButton";
 import ComentForm from "../form/ComentForm";
 
+
 const PostButton = ({create, setModal, props}) => {
+
     const [isLike, setIsLike] = useState(true);
     const [isComment, setIsComment] = useState(true);
     const [isShare, setIsShare] = useState(true);
