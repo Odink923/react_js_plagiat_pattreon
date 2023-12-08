@@ -1,8 +1,4 @@
 import React, {useMemo, useState} from 'react';
-
-import Navbar from "../components/UI/navbar/Navbar";
-import MyModal from "../components/UI/modal/MyModal";
-import MyButton from "../components/UI/button/MyButton";
 import PostList from "../components/PostList";
 import ModalShare from "../components/ModalShare";
 function Posts() {

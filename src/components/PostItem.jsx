@@ -1,8 +1,5 @@
 import React, {useState} from 'react';
-import MyButton from "./UI/button/MyButton";
-import ComentForm from "./UI/form/ComentForm";
 import PostButton from "./UI/button/PostButton";
-import CommentItem from "./CommentItem";
 import CommentList from "./CommentList";
 
 

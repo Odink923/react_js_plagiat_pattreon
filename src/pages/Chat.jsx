@@ -1,6 +1,4 @@
-import React, {useState} from 'react';
-import MyInput from "../components/UI/input/MyInput";
-import MyButton from "../components/UI/button/MyButton";
+import React from 'react';
 import ChatRightElement from "../components/ChatRightElement";
 import ChatLeftElement from "../components/ChatLeftElement";
 
