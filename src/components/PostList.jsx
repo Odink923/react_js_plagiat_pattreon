@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 const PostList = ({posts,  list, setModal}) => {
     return (
         <div>
-            <Link to={"/autor"}>
+
             <h1  className="list">
 
                 <MyButton >
@@ -16,10 +16,9 @@ const PostList = ({posts,  list, setModal}) => {
                     </svg>
                 </MyButton>
                 {list}</h1>
-            </Link>
-            {posts.map((post)=>
-                <PostItem post={post} setModal={setModal}  key={post.id}/>
-            )}
+
+
+                <PostItem  setModal={setModal}/>
         </div>
     );
 };

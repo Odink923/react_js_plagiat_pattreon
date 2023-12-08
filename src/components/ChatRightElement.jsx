@@ -1,14 +1,15 @@
 import React, {useEffect, useRef, useState} from 'react';
 import MyButton from "./UI/button/MyButton";
-
 import {useDispatch, useSelector} from "react-redux";
 import {addMessage, removeMessageAction} from "../store/messageReducer";
+
 
 const ChatRightElement = () => {
 
     const dispatch = useDispatch()
     const messages= useSelector((state)=>state.message.message);
     const [inputValue, setInputValue] = useState('');
+
     const handleAddMessage=() =>{
         const message ={
             body:inputValue,
