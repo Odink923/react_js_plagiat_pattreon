@@ -9,17 +9,17 @@ const Acount = () => {
 
     const [user, setUser] = useState({id: 1, nick: 'Angel', email:'niki@gmail.com', subscriptions: 3, photo:"./def.png"})
 
-    const [postsSelected, setPostsSelected] = useState([
-        {id: 1, title: '#First', body:'Is a good post'},
-        {id: 2, title: 'Second', body:'Is a good post'},
-        {id: 3, title: 'Third', body:'Is a good post'}
-    ])
-
-    const [myPosts, setMyPosts] = useState([
-        {id: 1, title: 'MyFirst', body:'MyIs a good post'},
-        {id: 2, title: 'MySecond', body:'MyIs a good post'},
-        {id: 3, title: 'MyThird', body:'MyIs a good post'}
-    ])
+    // const [postsSelected, setPostsSelected] = useState([
+    //     {id: 1, title: '#First', body:'Is a good post'},
+    //     {id: 2, title: 'Second', body:'Is a good post'},
+    //     {id: 3, title: 'Third', body:'Is a good post'}
+    // ])
+    //
+    // const [myPosts, setMyPosts] = useState([
+    //     {id: 1, title: 'MyFirst', body:'MyIs a good post'},
+    //     {id: 2, title: 'MySecond', body:'MyIs a good post'},
+    //     {id: 3, title: 'MyThird', body:'MyIs a good post'}
+    // ])
     const [modalShare, setModalShare] = useState(false);
 
     const [showMyPosts, setShowMyPosts] = useState(false);
@@ -97,10 +97,10 @@ const Acount = () => {
 
                 <div  id="postsList">
                     {showMyPosts && (
-                        <PostList  posts={myPosts} setModal={setModalShare}  list={"my post"}/>
+                        <PostList   setModal={setModalShare}  list={"my post"}/>
                     )}
                     {showPostsSelected && (
-                        <PostList  posts={postsSelected} setModal={setModalShare}  list={"selected post"}/>
+                        <PostList  setModal={setModalShare}  list={"selected post"}/>
                     )}
                     <ModalShare modal={modalShare} setModal={setModalShare}></ModalShare>
                 </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import PostItem from "./PostItem";
 import CommentItem from "./CommentItem";
 
 const CommentList = ({comments, children}) => {

@@ -3,14 +3,14 @@ import PostFilter from "../../PostFilter";
 import classes from "./Navbar.module.css"
 import MyButton from "../button/MyButton";
 import {Link, useHref} from "react-router-dom";
-const Navbar = ({searchQuery, setSearchQuery}) => {
+const Navbar = (/*{searchQuery, setSearchQuery}*/) => {
     return (
         <div  className={classes.container}>
 
             <Link  style={{width: 600}}  to={"/"}>
             <img width="200px" src="./logo.jpg"/>
             </Link>
-            <PostFilter   searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
+            <PostFilter  /* searchQuery={searchQuery} setSearchQuery={setSearchQuery}*//>
             <Link to={"/chat"}>
             <MyButton style={{matginTop: 14}}>
 
