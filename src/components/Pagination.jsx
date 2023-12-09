@@ -1,14 +1,13 @@
 import React from 'react';
 
 const Pagination = ({ currentPage, totalPageCount, onPageChange }) => {
-    const pages = Array.from({ length: totalPageCount }, (_, index) => index + 1);
     return (
-        <div className="pagination">
-            {pages.map((page) => (
-                <button  key={page} onClick={() => onPageChange(page)} disabled={currentPage === page}>
-                    {page}
+        <div style={{display:"flex", justifyContent:"center"}} className="pagination">
+
+                <button style={{border:'1px solid #000', padding: '20px',textAlign: 'center',cursor: 'pointer', fontSize:"16px", marginBottom:"20px"}}  onClick={() => onPageChange(currentPage+1)} >
+                    Show more
                 </button>
-            ))}
+
         </div>
     );
 };

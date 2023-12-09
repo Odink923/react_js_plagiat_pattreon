@@ -9,12 +9,12 @@ import Pagination from "../components/Pagination";
 function Posts() {
     const dispatch = useDispatch();
     const currentPage = useSelector(state => state.post.currentPage);
-    const totalPageCount = useSelector(state => state.post.totalPageCount);
+
     useEffect(() => {
-        dispatch(addManyPost([]));
+
         dispatch(fetchPost());
 
-    }, [currentPage]);
+    }, []);
     // const [posts, setPosts] = useState([
     //     {id: 1, title: 'First', body:'Is a good post'},
     //     {id: 2, title: 'Second', body:'Is a good post'},
