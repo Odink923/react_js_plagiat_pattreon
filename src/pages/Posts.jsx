@@ -3,18 +3,14 @@ import PostList from "../components/PostList";
 import ModalShare from "../components/ModalShare";
 import {fetchPost} from "../asyncActions/posts";
 import {useDispatch, useSelector} from "react-redux";
-import {addManyPost, setCurrentPage} from "../store/postReducer";
+import {addManyPost, clearArray, setCurrentPage} from "../store/postReducer";
 import Pagination from "../components/Pagination";
 
 function Posts() {
     const dispatch = useDispatch();
     const currentPage = useSelector(state => state.post.currentPage);
 
-    useEffect(() => {
 
-        dispatch(fetchPost());
-
-    }, []);
     // const [posts, setPosts] = useState([
     //     {id: 1, title: 'First', body:'Is a good post'},
     //     {id: 2, title: 'Second', body:'Is a good post'},

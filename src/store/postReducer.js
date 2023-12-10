@@ -10,6 +10,7 @@ export const postReducer = (state=defaultState,action)=>{
             return { ...state, post: [...state.post, ...action.payload] };
         case SET_CURRENT_PAGE:
             return { ...state, currentPage: action.payload, };
+
         default:
             return state
     }

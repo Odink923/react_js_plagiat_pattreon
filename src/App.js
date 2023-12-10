@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import './styles/App.css'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import About from "./pages/About";
@@ -7,6 +7,8 @@ import Acount from "./pages/Acount";
 import Navbar from "./components/UI/navbar/Navbar";
 import Autor from "./pages/Autor";
 import Chat from "./pages/Chat";
+import {fetchPost} from "./asyncActions/posts";
+import {useDispatch} from "react-redux";
 
 
 function App() {
@@ -15,11 +17,16 @@ function App() {
         {id: 2, title: 'Second', body:'Is a good post'},
         {id: 3, title: 'Third', body:'Is a good post'}
     ])
+
     const [searchQuery, setSearchQuery] = useState('');
     const searchResult = useMemo(() =>{
         return posts.filter(post => post.title.toLowerCase().includes(searchQuery.toLowerCase()));
     },[posts,searchQuery])*/
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(fetchPost());
 
+    }, []);
   return (
       <div className="App">
           <BrowserRouter>
