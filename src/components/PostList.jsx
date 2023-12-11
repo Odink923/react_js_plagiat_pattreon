@@ -3,12 +3,13 @@ import MyButton from "./UI/button/MyButton";
 import {Link} from "react-router-dom";
 import PostButton from "./UI/button/PostButton";
 import CommentList from "./CommentList";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import PostItem from "./PostItem";
+import {setSelectedPost} from "../store/postReducer";
 
 const PostList = ({list, setModal}) => {
     const posts = useSelector((state) => state.post.post);
-
+    const dispatch = useDispatch()
     const [comments, setComment] = useState([
         {id: 1, Name: 'Odin', body:'Very good'},
         {id: 2, Name: 'Admin', body:'It`s the best post'},
@@ -17,17 +18,18 @@ const PostList = ({list, setModal}) => {
     const createComment = (newComment) =>{
         setComment([...comments, newComment])
     }
-
+    //event for transfer post
+    const handleLinkClick = (post) => {
+        dispatch(setSelectedPost(post));
+    };
 
     return (
         <div>
-
-
-            <div >
-
+            <div>
                 {posts.map((post) =>(
                     <div >
-                        <Link to={"/autor"}>
+                        <Link to={"/autor"}
+                              onClick={() => handleLinkClick(post)}>
                             <h1  className="list">
 
                                 <MyButton >
@@ -40,7 +42,6 @@ const PostList = ({list, setModal}) => {
                         </Link>
                         <PostItem post={post} comments={comments} createComment={createComment} setModal={setModal}></PostItem>
                     </div>))}
-
             </div>
         </div>
     );

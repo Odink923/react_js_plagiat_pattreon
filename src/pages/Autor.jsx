@@ -1,10 +1,22 @@
 import React, {useState} from 'react';
 import MyButton from "../components/UI/button/MyButton";
+import {useSelector} from "react-redux";
+import PostItem from "../components/PostItem";
 
 
 
-const Autor = ({searchResult, ...posts}) => {
+const Autor = ({searchResult}) => {
     const [modal, setModal] = useState(false);
+    const selectedPost = useSelector((state) => state.post.selectedPost);
+    //i need refactor it then
+    const [comments, setComment] = useState([
+        {id: 1, Name: 'Odin', body:'Very good'},
+        {id: 2, Name: 'Admin', body:'It`s the best post'},
+        {id: 3, Name: 'Don', body:'Great!'}
+    ])
+    const createComment = (newComment) =>{
+        setComment([...comments, newComment])
+    }
     return (
         <div>
 
@@ -17,7 +29,7 @@ const Autor = ({searchResult, ...posts}) => {
                 </MyButton>
             </div>
             <div style={{display: "flex", justifyContent: "center", fontSize: "27px"}}>
-                <strong>NickName</strong>
+                <strong>User{selectedPost.id}</strong>
             </div>
             <div style={{display:"flex",justifyContent: "center"}}>
                 <div>
@@ -27,12 +39,12 @@ const Autor = ({searchResult, ...posts}) => {
                         <li>instagram:     lfdfdllf</li>
                         <li>telegram:     lfdfdllf</li>
                         <li>tiktok:     lfdfdllf</li>
-                        <div>{}</div>
                     </div>
                 </div>
             </div>
-
-
+            <div style={{marginTop:40}}>
+            <PostItem post={selectedPost} comments={comments} createComment={createComment} setModal={setModal}/>
+            </div>
 
         </div>
     );
