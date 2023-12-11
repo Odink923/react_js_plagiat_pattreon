@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 import MyButton from "./UI/button/MyButton";
 import {Link} from "react-router-dom";
 import PostButton from "./UI/button/PostButton";
@@ -6,6 +6,7 @@ import CommentList from "./CommentList";
 import {useDispatch, useSelector} from "react-redux";
 import PostItem from "./PostItem";
 import {setSelectedPost} from "../store/postReducer";
+import PostFilter from "./PostFilter";
 
 const PostList = ({list, setModal}) => {
     const posts = useSelector((state) => state.post.post);
@@ -15,6 +16,17 @@ const PostList = ({list, setModal}) => {
         {id: 2, Name: 'Admin', body:'It`s the best post'},
         {id: 3, Name: 'Don', body:'Great!'}
     ])
+
+    //search
+    const searchTerm = useSelector((state) => state.post.searchTerm);
+
+    const filteredPosts = useMemo(() => {
+        return posts.filter((post) =>
+            post.title.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    }, [posts, searchTerm]);
+
+
     const createComment = (newComment) =>{
         setComment([...comments, newComment])
     }
@@ -26,7 +38,8 @@ const PostList = ({list, setModal}) => {
     return (
         <div>
             <div>
-                {posts.map((post) =>(
+
+                {filteredPosts.map((post) =>(
                     <div >
                         <Link to={"/autor"}
                               onClick={() => handleLinkClick(post)}>

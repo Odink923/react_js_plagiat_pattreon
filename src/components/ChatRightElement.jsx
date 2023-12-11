@@ -34,7 +34,7 @@ const ChatRightElement = () => {
     }, [messages]);
     return (
         <div>
-            <div ref={containerRef} style={{height: 400, overflow:"auto"}}>
+            <div ref={containerRef} style={{height: 400, width:582, overflow:"auto"}}>
                 {messages.map((message)=>
                     (<div style={{margin:20}}>{message.body}
                             <MyButton onClick={()=>removeMessage(message)}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-trash" viewBox="0 0 16 16">

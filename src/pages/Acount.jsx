@@ -91,7 +91,9 @@ const Acount = () => {
             </div>
 
             <div style={{display: "flex", justifyContent:"center", marginTop:"1%", }}>
-                <button style={{height:"50px", width:"50px"}} onClick={()=>{setModalCreate(true);}}>+</button>
+                <div >
+                    <button style={{height:"50px", width:"50px"}} onClick={()=>{setModalCreate(true);}}>+</button>
+                </div>
 
                 <ModalCreate modalCreate={modalCreate} user={user} setUser={setUser} setModalCreate={setModalCreate} createBtnClick={createBtnClick}/>
 
@@ -104,7 +106,9 @@ const Acount = () => {
                     )}
                     <ModalShare modal={modalShare} setModal={setModalShare}></ModalShare>
                 </div>
+                <div>
                 <button style={{height:"50px", width:"50px"}}>^</button>
+                </div>
             </div>
         </div>
     );
