@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import PostButton from "./UI/button/PostButton";
 import CommentList from "./CommentList";
 import {useSelector} from "react-redux";
+import PostItem from "./PostItem";
 
 const PostList = ({list, setModal}) => {
     const posts = useSelector((state) => state.post.post);
@@ -37,16 +38,7 @@ const PostList = ({list, setModal}) => {
                                 </MyButton>
                                 {list}{post.id}</h1>
                         </Link>
-                    <div className="post">
-
-                        <div className="post__content">
-                            <strong> {post.title}</strong>
-                            <img width="800px" src="./def.png"/>
-                            <PostButton create={createComment} setModal={setModal}/>
-                            <div>{post.body}</div>
-                            <CommentList children={"Коментарі"} comments={comments}/>
-                        </div>
-                    </div>
+                        <PostItem post={post} comments={comments} createComment={createComment} setModal={setModal}></PostItem>
                     </div>))}
 
             </div>
