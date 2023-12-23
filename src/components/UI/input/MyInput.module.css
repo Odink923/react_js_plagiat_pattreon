@@ -1,8 +1,21 @@
 .mySearch{
     padding: 10px 10px 10px 5px;
-    border-radius: 10px;
-    width: 900px;
-    height: 35px;
-    font-size: 30px;
-    margin-top: 25px;
+    border-radius: 70px;
+    width: 700px;
+    height: 50px;
+    font-size: 20px;
+    border: 0px;
+
+}
+.inputContainer {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 10px; /* відступ від лівого краю в залежності від ваших потреб */
+    transform: translateY(-50%);
+    fill: #999; /* колір іконки */
+    pointer-events: none;
 }

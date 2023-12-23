@@ -1,5 +1,33 @@
 .container{
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #C9F4AA;
+    font-family: "Trebuchet MS";
+    height: 100px;
+    border-radius: 70px;
+
+}
+.logo{
+    width: 122px;
+    height: 46px;
+    font-size: 40px;
+    text-decoration: none;
+    margin-right: 30px;
+    color: #3A3A3A;
+}
+.navItems{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #3A3A3A;
+
+}
+.navItems div{
+    padding-left: 25px;
+}
+.underlineNone{
+    text-decoration: none;
+    color: #3A3A3A;
 }

@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import MyButton from "../components/UI/button/MyButton";
 import {useSelector} from "react-redux";
-import PostItem from "../components/PostItem";
+import PostItem from "../components/UI/postItem/PostItem";
+
 
 
 

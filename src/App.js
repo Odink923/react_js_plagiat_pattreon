@@ -30,7 +30,9 @@ function App() {
   return (
       <div className="App">
           <BrowserRouter>
+
               <Navbar /*searchQuery={searchQuery} setSearchQuery={setSearchQuery}/*//>
+
               <Routes>
                   <Route path="/about" element={<About />} />
                   <Route path="/" element={<Posts /*searchResult={searchResult} posts={posts}*//>}/>

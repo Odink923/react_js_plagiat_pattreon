@@ -1,0 +1,14 @@
+.post {
+    font-size: 30px;
+    margin-left: 31px;
+    margin-right: 31px;
+    margin-bottom: 34px;
+    font-family: "Trebuchet MS";
+
+}
+
+.postButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}

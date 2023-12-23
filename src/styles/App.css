@@ -9,18 +9,9 @@
     justify-content: center;
 }
 .App{
-
-    width: 800px
+    width: 1674px;
 }
-.post {
-    display: flex;
 
-    padding: 15px;
-    font-size: 30px;
-    margin-top: 15px;
-
-
-}
 .list{
     text-align: center;
 }
@@ -53,4 +44,28 @@
     width: 500px;
     height: 35px;
     font-size: 30px;
+}
+/*gradient for ListCarusel*/
+.gradient-carusel {
+    background: linear-gradient(to right, white, white);
+}
+
+#lol{
+    display: flex;
+    justify-content: center;
+    width: 664px;
+    flex-direction: column;
+    background: #F2F2F2;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+.divUserIconPostList{
+    display:flex;
+    justify-content:start;
+    align-items:center;
+    margin-left:31px;
+    margin-top:22px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #3A3A3A;
 }

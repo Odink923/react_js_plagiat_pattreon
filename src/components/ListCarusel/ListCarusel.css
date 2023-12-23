@@ -1,0 +1,97 @@
+.list-carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+
+}
+
+.carousel-item {
+    flex: 0 0 0;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    padding: 10px;
+    text-align: center;
+
+    opacity: 1;
+   /* transition: opacity 0.5s ease-in-out;*/
+}
+
+.carousel-item:not(.active) {
+    opacity: 0; /* Невидимість для неактивних елементів */
+}
+
+.carousel-item.active {
+    /* Змінити фон для активного елемента */
+
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.arrow.left {
+    left: 0;
+
+}
+
+.arrow.right {
+    right: 0;
+}
+
+/*gradient*/
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 10%, white 90%, rgba(255, 255, 255, 0) 100%);
+
+    width: 97%;
+}
+
+.carousel-container::before{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 20%;
+    height: 100%;
+}
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%;
+}
+
+.carousel-container::before {
+
+
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 80%, white 100%);
+    z-index: 1;
+
+}
+
+.carousel-container::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 85%, white 100%);
+}
