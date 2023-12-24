@@ -19,3 +19,42 @@
     color: #3A3A3A;
 
 }
+.fixedMenu {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+}
+
+/*Right Menu*/
+.rightMenu{
+    right: 0;
+    margin-right: 130px;
+    position: absolute;
+    border-radius:30px;
+    font-family: "Trebuchet MS";
+    font-size:20px;
+}
+
+.menuRighItem{
+    width: 373px;
+    height: 85px;
+    font-family: "Trebuchet MS";
+    font-size: 20px;
+    background: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin-top: 15px;
+    font-weight: 700;
+    color: #3A3A3A;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.menuRighItem:hover{
+    background: #C9F4AA;
+
+}
+
+

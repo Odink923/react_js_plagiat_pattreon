@@ -39,7 +39,7 @@ const PostList = ({list, setModal}) => {
         <div>
             <div>
                 {filteredPosts.map((post) => (
-                    <div id="lol">
+                    <div style={{marginBottom:"50px"}} id="lol">
                         <Link style={{textDecoration: "none"}} to={"/autor"}
                               onClick={() => handleLinkClick(post)}>
                             <div className="divUserIconPostList">
@@ -64,7 +64,7 @@ const PostList = ({list, setModal}) => {
                                 <div style={{fontSize: "20px", fontFamily: "Trebuchet MS"}}>{list}{post.id}</div>
                             </div>
                         </Link>
-                        <PostItem post={post} comments={comments} createComment={createComment}
+                        <PostItem  post={post} comments={comments} createComment={createComment}
                                   setModal={setModal}></PostItem>
                     </div>))}
             </div>

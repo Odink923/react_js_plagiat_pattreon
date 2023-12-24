@@ -18,7 +18,6 @@ function App() {
            {id: 2, title: 'Second', body:'Is a good post'},
            {id: 3, title: 'Third', body:'Is a good post'}
        ])
-
        const [searchQuery, setSearchQuery] = useState('');
        const searchResult = useMemo(() =>{
            return posts.filter(post => post.title.toLowerCase().includes(searchQuery.toLowerCase()));

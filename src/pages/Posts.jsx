@@ -8,19 +8,17 @@ import Pagination from "../components/Pagination";
 import ListCarusel from "../components/ListCarusel/ListCarusel";
 import CaruselItem from "../components/UI/caruselItem/CaruselItem";
 import Menu from "../components/UI/menu/Menu";
+import RightMenu from "../components/UI/menu/RightMenu";
 
 function Posts() {
     const dispatch = useDispatch();
     const currentPage = useSelector(state => state.post.currentPage);
-
-
     // const [posts, setPosts] = useState([
     //     {id: 1, title: 'First', body:'Is a good post'},
     //     {id: 2, title: 'Second', body:'Is a good post'},
     //     {id: 3, title: 'Third', body:'Is a good post'}
     // ])
     //const [searchQuery, setSearchQuery] = useState('')
-
     // const searchResult = useMemo(() =>{
     //     return posts.filter(post => post.title.toLowerCase().includes(searchQuery.toLowerCase()));
     // },[posts,searchQuery])
@@ -104,13 +102,37 @@ function Posts() {
             Cooking</CaruselItem>,
     ];
 
-
     const [modal, setModal] = useState(false);
+    ///Fixed menu logic
+    const [isFixed, setIsFixed] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            const offsetTop = document.getElementById('fixed-element').offsetTop;
+            const scrollTop = window.scrollY;
+
+            if (scrollTop >= offsetTop) {
+                setIsFixed(true);
+            } else {
+                setIsFixed(false);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+
+        // Забезпечте очистку обробника подій при розмонтовуванні компонента
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+    ////////////    ///////////////
+
     return (
         <div>
             <div>
                 <ListCarusel items={items}/>
-                <Menu />
+
+                   <Menu/>
+                    <RightMenu/>
+
             </div>
 
             <div style={{display: "flex", justifyContent: "center"}}>

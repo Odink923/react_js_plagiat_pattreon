@@ -11,7 +11,6 @@ const Chat = () => {
                 <ChatLeftElement children="lol2"/>
                 <ChatLeftElement children="lol3"/>
                 <ChatLeftElement children="lol4"/>
-
             </div>
             <div className="vertical-line"></div>
             <div className="right-element">

@@ -1,10 +1,29 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from "./Menu.module.css"
 import MyButton from "../button/MyButton";
 const Menu = () => {
+    const [isFixed, setIsFixed] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+
+            if (scrollTop >= 300) {
+                setIsFixed(true);
+            } else {
+                setIsFixed(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <div className={classes.menu}>
-            <div className={classes.menu_content}>
+        <div className={`${classes.menu} ${isFixed ? classes.fixedMenu : ''}`}>
+            <div className={classes.menu_content} id="fixed-element">
                 <div style={{marginLeft: "28px", marginTop: "12px", marginBottom: "23px"}}>
                     <MyButton>
                         <div className={classes.forSvg}>
