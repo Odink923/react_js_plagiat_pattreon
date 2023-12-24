@@ -110,7 +110,9 @@ function Posts() {
         <div>
             <div>
                 <ListCarusel items={items}/>
+                <Menu />
             </div>
+
             <div style={{display: "flex", justifyContent: "center"}}>
 
                 <PostList   /* posts={searchResult}*/ setModal={setModal} list={"User name"}/>

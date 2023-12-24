@@ -26,8 +26,7 @@ const ListCarusel = ({items}) => {
                                 <div
                                     key={index}
                                     className={`carousel-item ${isVisible ? 'active' : ''}`}
-                                    style={{transform: `translateX(-${currentIndex * 50.33}%)`}}
-                                >
+                                    style={{transform: `translateX(-${currentIndex * 50.33}%)`}}>
                                     {item}
                                 </div>
                             );
@@ -42,7 +41,6 @@ const ListCarusel = ({items}) => {
                             d="M27.0587 28.4414L21.6915 23.0625L27.0587 17.6836L25.4064 16.0313L18.3751 23.0625L25.4064 30.0938L27.0587 28.4414Z"
                             fill="#2C2C2C"/>
                     </svg>
-
                 </button>
                 <button className="arrow right" onClick={nextItem}>
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
