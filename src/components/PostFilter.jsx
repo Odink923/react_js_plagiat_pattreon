@@ -13,10 +13,9 @@ const PostFilter = (/*{searchQuery, setSearchQuery}*/) => {
     }
     return (
         <div>
-            <SearchInput style={{fontSize:"20px", fontFamily:"Trebuchet MS"}}
-
-                     value={searchTermLocal}
-                     onChange={handleSearchChange}/>
+            <SearchInput style={{fontSize: "20px", fontFamily: "Trebuchet MS"}}
+                         value={searchTermLocal}
+                         onChange={handleSearchChange}/>
         </div>
     );
 };

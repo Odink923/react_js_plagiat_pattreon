@@ -9,40 +9,40 @@ import Autor from "./pages/Autor";
 import Chat from "./pages/Chat";
 import {fetchPost} from "./asyncActions/posts";
 import {useDispatch} from "react-redux";
+import Menu from "./components/UI/menu/Menu";
 
 
 function App() {
- /*   const [posts, setPosts] = useState([
-        {id: 1, title: 'First', body:'Is a good post'},
-        {id: 2, title: 'Second', body:'Is a good post'},
-        {id: 3, title: 'Third', body:'Is a good post'}
-    ])
+    /*   const [posts, setPosts] = useState([
+           {id: 1, title: 'First', body:'Is a good post'},
+           {id: 2, title: 'Second', body:'Is a good post'},
+           {id: 3, title: 'Third', body:'Is a good post'}
+       ])
 
-    const [searchQuery, setSearchQuery] = useState('');
-    const searchResult = useMemo(() =>{
-        return posts.filter(post => post.title.toLowerCase().includes(searchQuery.toLowerCase()));
-    },[posts,searchQuery])*/
+       const [searchQuery, setSearchQuery] = useState('');
+       const searchResult = useMemo(() =>{
+           return posts.filter(post => post.title.toLowerCase().includes(searchQuery.toLowerCase()));
+       },[posts,searchQuery])*/
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(fetchPost());
 
     }, []);
-  return (
-      <div className="App">
-          <BrowserRouter>
-
-              <Navbar /*searchQuery={searchQuery} setSearchQuery={setSearchQuery}/*//>
-
-              <Routes>
-                  <Route path="/about" element={<About />} />
-                  <Route path="/" element={<Posts /*searchResult={searchResult} posts={posts}*//>}/>
-                  <Route path="/acount" element={<Acount/>}/>
-                  <Route path="/chat" element={<Chat/>}/>
-                  <Route path="/autor" element={<Autor /*searchResult={searchResult} posts={posts}*//>}/>
-              </Routes>
-          </BrowserRouter>
-      </div>
-  );
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Navbar /*searchQuery={searchQuery} setSearchQuery={setSearchQuery}/*//>
+                <Menu/>
+                <Routes>
+                    <Route path="/about" element={<About/>}/>
+                    <Route path="/" element={<Posts /*searchResult={searchResult} posts={posts}*//>}/>
+                    <Route path="/acount" element={<Acount/>}/>
+                    <Route path="/chat" element={<Chat/>}/>
+                    <Route path="/autor" element={<Autor /*searchResult={searchResult} posts={posts}*//>}/>
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;

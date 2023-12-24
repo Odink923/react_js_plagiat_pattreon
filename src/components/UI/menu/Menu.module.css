@@ -1,0 +1,18 @@
+.menu{
+    background:#F2F2F2;
+    margin-top:180px;
+    position: fixed;
+    border-radius:30px;
+    font-family: "Trebuchet MS";
+}
+.menu_content{
+    width:374px;
+    height:544px;
+}
+.forSvg{
+    background:#F2F2F2;
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+    font-size:20px;
+}
