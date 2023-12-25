@@ -19,9 +19,9 @@
 
 /*чат стилі*/
 .container {
+    font-family: "Trebuchet MS";
     display: flex;
-    justify-content: space-between;
-    align-items: start;
+    justify-content: center;
 }
 .vertical-line{
     border-left: 1px solid green;
@@ -38,12 +38,14 @@
 }
 .myChatInput{
 
-
-    padding: 10px 10px 10px 5px;
+    outline: none;
+    margin: 20px;
     border-radius: 10px;
     width: 500px;
     height: 35px;
-    font-size: 30px;
+    font-size: 20px;
+    border: none;
+
 }
 /*gradient for ListCarusel*/
 .gradient-carusel {
@@ -69,4 +71,32 @@
     text-decoration: none;
     color: #3A3A3A;
 }
+/*chaaaaat*/
+.chatUserItem{
+    margin-top:30px;
+    margin-left:30px;
+    background:#F2F2F2;
+    width:868px;
+    height:101px;
+    border-radius:30px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.categories{
+    width: 373px;
+    height: 85px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    position: absolute;
+    background: #F2F2F2;
+    border-radius: 30px;
+    padding-left: 36px;
+    padding-right: 36px;
+}
+.categories-content{
 
+}

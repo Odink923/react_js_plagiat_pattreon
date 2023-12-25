@@ -1,6 +1,6 @@
 import React from 'react';
-import MyButton from "./UI/button/MyButton";
-import {fetchMessages} from "../asyncActions/messages";
+import MyButton from "../UI/button/MyButton";
+import {fetchMessages} from "../../asyncActions/messages";
 import {useDispatch} from "react-redux";
 
 const ChatLeftElement = ({children}) => {
