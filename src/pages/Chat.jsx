@@ -2,6 +2,7 @@ import React from 'react';
 import ChatRightElement from "../components/ChatComponents/ChatRightElement";
 import ChatLeftElement from "../components/ChatComponents/ChatLeftElement";
 import Menu from "../components/UI/menu/Menu";
+import ChatUserMenu from "../components/ChatComponents/ChatUserMenu";
 
 const Chat = () => {
 
@@ -9,7 +10,7 @@ const Chat = () => {
 
         <div>
             <Menu/>
-
+            <ChatUserMenu/>
             <div className="categories">
 
                 <div style={{display: "flex", alignItems: "center"}}>

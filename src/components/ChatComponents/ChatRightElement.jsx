@@ -41,7 +41,7 @@ const ChatRightElement = () => {
                             <div style={{background:"#F2F2F2", display:"flex", justifyContent:"space-between", width:"700px",borderRadius:"30px",padding:"20px"}}>
 
                             {message.body}
-
+                                <div  style={{background:"#F2F2F2"}}>
                                 <MyButton onClick={() => removeMessage(message)}>
                                     <div style={{background:"#F2F2F2"}}>
                                     <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -53,6 +53,7 @@ const ChatRightElement = () => {
                                     </svg>
                                     </div>
                                 </MyButton>
+                                </div>
 
                             </div>
                                 <div style={{marginTop:"40px",marginLeft:"15px"}}>{`${new Date().getHours()}:${new Date().getMinutes()}`}</div>
@@ -88,7 +89,7 @@ const ChatRightElement = () => {
                     <div>
                 <MyButton onClick={handleAddMessage}>
                     <div style={{background:"#F2F2F2"}}>
-                    <svg width="80" height="45" viewBox="0 0 80 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg  style={{background:"#F2F2F2"}} width="80" height="45" viewBox="0 0 80 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="80" height="45" rx="22.5" fill="#C9F4AA"/>
                         <path d="M52.7711 10.2288C52.9921 10.4498 53.0601 10.7812 52.9441 11.0714L43.8521 33.8012C43.4975 34.6879 42.2881 34.8008 41.7754 33.9952L36.809 26.1909L29.0048 21.2245C28.1991 20.7119 28.312 19.5025 29.1987 19.1478L51.9285 10.0559C52.2187 9.9398 52.5501 10.0078 52.7711 10.2288ZM38.3705 25.7343L42.6844 32.5133L50.0797 14.0251L38.3705 25.7343ZM48.9749 12.9202L30.4866 20.3155L37.2657 24.6294L48.9749 12.9202Z" fill="black"/>
                     </svg>

@@ -1,0 +1,10 @@
+.userMenu{
+    width: 373px;
+    height: 659px;
+    background: #F2F2F2;
+    right: 0;
+    position: absolute;
+    margin-top: 30px;
+    margin-right: 122px;
+    border-radius: 30px;
+}
