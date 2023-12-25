@@ -11,12 +11,18 @@ const Navbar = (/*{searchQuery, setSearchQuery}*/) => {
             </Link>
             <PostFilter  /* searchQuery={searchQuery} setSearchQuery={setSearchQuery}*//>
             <div className={classes.navItems}>
+                <Link className={classes.underlineNone} to={"/"}>
                 <div>Home</div>
+                </Link>
                 <Link className={classes.underlineNone} to={"/chat"}>
                     <div>Chat</div>
                 </Link>
+                <Link className={classes.underlineNone} to={"/register"}>
                 <div>Registration</div>
+                </Link>
+                <Link className={classes.underlineNone} to={"/login"}>
                 <div>Login</div>
+                </Link>
                 <div>
                     <Link to={"/acount"}>
                         <MyButton style={{marginTop: 8,}}>

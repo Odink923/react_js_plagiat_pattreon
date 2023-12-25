@@ -10,6 +10,8 @@ import Chat from "./pages/Chat";
 import {fetchPost} from "./asyncActions/posts";
 import {useDispatch} from "react-redux";
 import Menu from "./components/UI/menu/Menu";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
             <BrowserRouter>
                 <Navbar /*searchQuery={searchQuery} setSearchQuery={setSearchQuery}/*//>
                 <Routes>
+                    <Route path="/login" element={<Login/>}/>
+                    <Route path="/register" element={<Register/>}/>
                     <Route path="/about" element={<About/>}/>
                     <Route path="/" element={<Posts /*searchResult={searchResult} posts={posts}*//>}/>
                     <Route path="/acount" element={<Acount/>}/>

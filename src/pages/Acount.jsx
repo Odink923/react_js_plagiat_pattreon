@@ -91,8 +91,7 @@ const Acount = () => {
                 <button className="userButon">226 subscribers</button>
 
             </div>
-            <div style={{display: "flex", justifyContent: "center", position: "absolute"}}>
-            </div>
+
             <div style={{display: "flex", justifyContent: "center", minWidth: "500px"}}>
                 <div style={{marginRight:"25px"}}>
                 <MyButton  style={{height: "50px", width: "50px"}} onClick={() => {

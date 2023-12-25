@@ -133,3 +133,32 @@
     padding-bottom: 13px;
 
 }
+/*Login*/
+.loginReg{
+    width: 500px;
+    height: auto;
+    background: #C9F4AA;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.log{
+    margin-top: 31px;
+    font-family: "Trebuchet MS";
+    color: #3A3A3A;
+    display: flex;
+    justify-content: center;
+}
+.loginButon{
+    margin-top: 25px;
+    background:#DFB3FA;
+    border: 0;
+    border-radius:30px;
+    padding-top: 14px;
+    font-size: 20px;
+    padding-right: 48px;
+    padding-left: 48px;
+    padding-bottom: 13px;
+
+}
