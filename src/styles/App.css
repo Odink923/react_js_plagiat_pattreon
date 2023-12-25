@@ -100,3 +100,36 @@
 .categories-content{
 
 }
+
+/*Account user*/
+.container1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.overlay {
+
+    position: absolute;
+
+    margin-top: 185px;
+   /* змініть кольор фону за потребою */
+    color: #fff; /* змініть кольор тексту за потребою */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.userButon{
+    margin-left: 30px;
+    background:#C9F4AA;
+    border: 0;
+    border-radius:30px;
+    padding-top: 14px;
+    font-size: 20px;
+    padding-right: 48px;
+    padding-left: 48px;
+    padding-bottom: 13px;
+
+}

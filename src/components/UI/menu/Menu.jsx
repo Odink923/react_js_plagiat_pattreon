@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import classes from "./Menu.module.css"
 import MyButton from "../button/MyButton";
-const Menu = () => {
+const Menu = ({margtop}) => {
     const [isFixed, setIsFixed] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.scrollY;
 
-            if (scrollTop >= 300) {
+            if (scrollTop >= margtop) {
                 setIsFixed(true);
             } else {
                 setIsFixed(false);

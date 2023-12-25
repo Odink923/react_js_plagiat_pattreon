@@ -130,8 +130,8 @@ function Posts() {
             <div>
                 <ListCarusel items={items}/>
 
-                   <Menu/>
-                    <RightMenu/>
+                   <Menu margtop="300"/>
+                    <RightMenu margtop="300" />
 
             </div>
 

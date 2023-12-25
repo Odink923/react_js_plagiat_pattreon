@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import classes from './Menu.module.css'
 import CaruselItem from "../caruselItem/CaruselItem";
 
-const RightMenu = () => {
+const RightMenu = ({margtop}) => {
     const [isFixed, setIsFixed] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -10,7 +10,7 @@ const RightMenu = () => {
         const handleScroll = () => {
             const scrollTop = window.scrollY;
 
-            if (scrollTop >= 300) {
+            if (scrollTop >= margtop) {
                 setIsFixed(true);
 
                 // Якщо елемент фіксований і ще не відображається, покажіть його

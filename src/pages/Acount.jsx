@@ -3,6 +3,9 @@ import PostList from "../components/PostList";
 import ModalShare from "../components/ModalShare";
 
 import ModalCreate from "../components/UI/modal/ModalCreate";
+import Menu from "../components/UI/menu/Menu";
+import RightMenu from "../components/UI/menu/RightMenu";
+import MyButton from "../components/UI/button/MyButton";
 
 
 const Acount = () => {
@@ -48,65 +51,89 @@ const Acount = () => {
         setModalCreate(false);
     }
 
-
     return (
-        <div>
-
-            <div style={{display: "flex", justifyContent: "center"}}>
-                <div style={{display: "flex"}}>
-                    <div>
-                        <img width="300px" src={user.photo} style={{marginTop: "8%", border: "3px solid #ccc"}}/>
-                    </div>
-                    <div style={{marginLeft: "400px"}}>
-                        <div style={{float: "right", marginTop: "50%", marginBottom: "220%"}}>
-                            <svg onClick={() => setModalShare(true)} xmlns="http://www.w3.org/2000/svg" width="26"
-                                 height="26" fill="currentColor"
-                                 className="bi bi-share" viewBox="0 0 16 16">
+        <div style={{fontFamily: "Trebuchet MS"}}>
+            <div style={{height: "300px", marginTop: "30px"}}>
+                <div className="container1">
+                    <div className="overlay">
+                        <svg width="250" height="250" viewBox="0 0 250 250" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="125" cy="125" r="102.062" fill="#3A3A3A" stroke="black"/>
+                            <g clip-path="url(#clip0_261_312)">
                                 <path
-                                    d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
-                            </svg>
-                            <ModalShare modal={modalShare} setModal={setModalShare}></ModalShare>
-                        </div>
-                        <div>
-                            <button style={{float: "right"}}>Edit profil</button>
-                        </div>
+                                    d="M125 20.8333C67.5002 20.8333 20.8335 67.5 20.8335 125C20.8335 182.5 67.5002 229.167 125 229.167C182.5 229.167 229.167 182.5 229.167 125C229.167 67.5 182.5 20.8333 125 20.8333ZM125 52.0833C142.292 52.0833 156.25 66.0416 156.25 83.3333C156.25 100.625 142.292 114.583 125 114.583C107.708 114.583 93.7502 100.625 93.7502 83.3333C93.7502 66.0416 107.708 52.0833 125 52.0833ZM125 200C98.9585 200 75.9377 186.667 62.5002 166.458C62.8127 145.729 104.167 134.375 125 134.375C145.729 134.375 187.188 145.729 187.5 166.458C174.063 186.667 151.042 200 125 200Z"
+                                    fill="#F2F2F2"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_261_312">
+                                    <rect width="250" height="250" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
                     </div>
+                    <img src="./forUser2.png"/>
                 </div>
-            </div>
+                <Menu margtop="450"/>
+                <RightMenu margtop="450"/>
 
-            <div>
-                <div style={{display: "flex", minWidth: "500px"}}>
-                    <div style={{marginLeft: "25%"}}>
-                        <div>
-                            <h1 style={{marginTop: "10%", marginBottom: "20%"}}>{user.nick}</h1>
-                        </div>
-                        <div>
-                            <button>{user.subscriptions} subscriptions</button>
-                        </div>
-                    </div>
-                    <div style={{marginLeft: "10%", marginTop: "3%"}}>
-                        <textarea style={{width: "170%"}} name="textarea-description" defaultValue="Description"
-                                  maxLength="200px"/>
-                    </div>
+
+
+            </div>
+            <div style={{display: "flex", justifyContent: "center",marginTop:"140px"}}>
+                <div style={{fontSize: "40px", fontWeight: "bold"}}>User name</div>
+            </div>
+            <div style={{display: "flex", justifyContent: "center", fontSize: "20px"}}>
+                <div>Descripton</div>
+            </div>
+            <div style={{display:"flex",justifyContent:"center",marginTop:"15px",marginBottom:"24px"}}>
+
+                <button className="userButon">256 subscriptions</button>
+                <button className="userButon">226 subscribers</button>
+
+            </div>
+            <div style={{display: "flex", justifyContent: "center", position: "absolute"}}>
+            </div>
+            <div style={{display: "flex", justifyContent: "center", minWidth: "500px"}}>
+                <div style={{marginRight:"25px"}}>
+                <MyButton  style={{height: "50px", width: "50px"}} onClick={() => {
+                    setModalCreate(true);
+                }}><svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="45" height="45" rx="22.5" fill="#C9F4AA"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.9502 11.1375C23.4939 11.1375 23.9346 11.5782 23.9346 12.1219V21.9656H33.7783C34.322 21.9656 34.7627 22.4064 34.7627 22.95C34.7627 23.4937 34.322 23.9344 33.7783 23.9344H23.9346V33.7781C23.9346 34.3218 23.4938 34.7625 22.9502 34.7625C22.4065 34.7625 21.9658 34.3218 21.9658 33.7781V23.9344H12.1221C11.5784 23.9344 11.1377 23.4937 11.1377 22.95C11.1377 22.4064 11.5784 21.9656 12.1221 21.9656H21.9658V12.1219C21.9658 11.5782 22.4065 11.1375 22.9502 11.1375Z" fill="black"/>
+                </svg>
+
+                </MyButton></div>
+
+                <div style={{marginRight: "148px",display:"flex",alignItems:"center"}}>
+
+
+                    <button style={{
+                        background: "white",
+                        border: "0px",
+                        fontSize: "20px",
+                        fontWeight: "bold",
+                        fontFamily: "Trebuchet MS"
+                    }} onClick={myPostsBtnClick}>Posts 122
+                    </button>
+
+
+
                 </div>
-            </div>
-
-            <div style={{display: "flex", marginTop: "6%", minWidth: "500px"}}>
-                <button style={{width: "50%"}} onClick={myPostsBtnClick}>My posts</button>
-                <button style={{width: "50%"}} onClick={postsSelectedBtnClick}>Selected</button>
-            </div>
-
-            <div style={{display: "flex", justifyContent: "center", marginTop: "1%",}}>
-                <div>
-                    <button style={{height: "50px", width: "50px"}} onClick={() => {
-                        setModalCreate(true);
-                    }}>+
+                <div style={{display:"flex"}}>
+                    <button style={{
+                        background: "white",
+                        border: "0px",
+                        fontSize: "20px",
+                        fontWeight: "bold",
+                        fontFamily: "Trebuchet MS"
+                    }} onClick={postsSelectedBtnClick}>Selected 12
                     </button>
                 </div>
+            </div>
+            <div style={{display: "flex", justifyContent: "center", marginTop: "1%",}}>
 
                 <ModalCreate modalCreate={modalCreate} user={user} setUser={setUser} setModalCreate={setModalCreate}
                              createBtnClick={createBtnClick}/>
-
                 <div id="postsList">
                     {showMyPosts && (
                         <PostList setModal={setModalShare} list={"my post"}/>
@@ -116,9 +143,7 @@ const Acount = () => {
                     )}
                     <ModalShare modal={modalShare} setModal={setModalShare}></ModalShare>
                 </div>
-                <div>
-                    <button style={{height: "50px", width: "50px"}}>^</button>
-                </div>
+
             </div>
         </div>
     );
